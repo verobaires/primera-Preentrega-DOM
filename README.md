@@ -8,7 +8,7 @@ Se muestra el total a pagar con impuestos y descuentos incluidos <br>
 Se muestra por consola resultados parciales de las operaciones 
 
 INTERACCIONES CON DOM
-Se modifica el h1 
-Se agrega un h2 a un div vacio
-Se crea un div con h2
-Se muestra los productos segun el array de elegidos
+Se modifica el h1 <br>
+Se agrega un h2 a un div vacio <br>
+Se crea un div con h2 <br>
+Se muestra los productos segun el array de elegidos <br>
