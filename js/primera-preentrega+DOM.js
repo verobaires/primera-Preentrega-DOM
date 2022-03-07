@@ -47,7 +47,7 @@ if (encontrar == true) {
 console.log(`El monto por Promo 2 a descontar (Si compra una prenda en promo se suma una igual y se descuenta su precio) ${promo2}`);
 
 //VALOR TOTAL DE LA COMPRA
-let compraTotal = sumaBruta - (promo1 + promo2)
+let compraTotal = sumaBruta - promo1 
 console.log(`El valor total de la compra con los descuentos es $  ${compraTotal}`)
 
 
@@ -57,36 +57,36 @@ let totalNeto
 const efvo = x =>x-(x*0.10);
 const tarj3 = x => x*1.10;
 const tarj6 = x => x*1.15;
-/* let costo = compraTotal */
+ 
 
 function formaDePago(fPago, compraTotal) {
     if (fPago == 1) {
-      totalNeto = efvo(compraTotal);//deberia hacer (100/1.10)*1.21 
-       /*  alert("El monto total de su compra es: "+total) */
+      totalNeto = efvo(compraTotal); 
+       
       
     }    
-    /* si fPago no es 1 */
+    
     else{
 
         let cuotas = parseInt(prompt("Indique la cantidad de cuotas en las que abonara 3 o 6"))
         switch (cuotas) {
             case 3:
-              totalNeto =tarj3(compraTotal)//deberia hacer (100*1.1)*1.21
+              totalNeto =tarj3(compraTotal) 
                 return totalNeto;
-                break;
+               
             case 6:
-              totalNeto = tarj6(compraTotal)//deberia hacer (100*1.15)*1.21 
+              totalNeto = tarj6(compraTotal)  
                 return totalNeto;
-                break;
+               
             default:
                 return 0
-                break;
+                
             
         }
     }
 }
 formaDePago(fPago, compraTotal)
-/* alert("El total de su compra es: "+total)  */
+ 
 
 // TOTAL A PAGAR  muestra el total de la compra con los impuestos incluidos
 let totalAPagar = (totalNeto*1.21).toFixed(2) /* totalNeto = total */
